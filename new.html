@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year!</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: black;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    #earth {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      cursor: pointer; /* Add cursor style to indicate it's clickable */
+    }
+
+    #clickText {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      font-size: 20px;
+    }
+
+    #happyNewYear {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="earth">
+    <!-- Insert an image of the Earth in space -->
+    <img src="Earth_in_Space.webp" alt="Earth in Space">
+  </div>
+
+  <div id="clickText">
+    <p>Click the world</p>
+  </div>
+
+  <div id="happyNewYear">
+    <p>Happy New Year!</p>
+    <!-- Insert an image of the solar system background -->
+    <img src="Solar_System.webp" alt="Solar System">
+  </div>
+
+  <script>
+    var earthImage = document.getElementById('earth');
+    var clickText = document.getElementById('clickText');
+    var happyNewYear = document.getElementById('happyNewYear');
+
+    // Add a click event listener to the Earth image
+    earthImage.addEventListener('click', function() {
+      // Hide the Earth image and click text
+      earthImage.style.display = 'none';
+      clickText.style.display = 'none';
+
+      // Show the "Happy New Year" message and solar system image
+      happyNewYear.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
